@@ -88,7 +88,7 @@ const QuoteCreate = () => {
       )}
       <button
         onClick={handleCreateQuote}
-        className="mt-4 bg-blue-500 text-white p-2 rounded-lg"
+        className="mt-4 bg-orange-400 text-white p-2 rounded-lg"
       >
         Create Quote
       </button>

@@ -83,7 +83,7 @@ const Login = () => {
         </div>
         <div className="text-center ">
           <button
-            className="w-32 bg-blue-500 text-white p-2 rounded-lg justify-center"
+            className="w-32 bg-orange-400 text-white p-2 rounded-lg justify-center"
             onClick={handleSumbit}
           >
             Sumbit

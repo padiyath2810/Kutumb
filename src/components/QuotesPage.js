@@ -12,7 +12,9 @@ const QuotesPage = () => {
       setLoading(true);
       try {
         const response = await fetch(
-          `https://assignment.stage.crafto.app/getQuotes?limit=20&offset=0`,
+          `https://assignment.stage.crafto.app/getQuotes?limit=5&offset=${
+            page * 20
+          }`,
           {
             headers: { Authorization: token },
           }
@@ -43,8 +45,14 @@ const QuotesPage = () => {
   }, [page, token]);
 
   const handlePage = () => {
+    const currentScrollPosition = window.scrollY;
     setPage((prevPage) => prevPage + 1);
-  };
+
+    setTimeout(() => {
+        window.scrollTo(0, currentScrollPosition);
+      }, 500); 
+    };
+  
 
   return (
     <div className="container mx-auto p-4">
