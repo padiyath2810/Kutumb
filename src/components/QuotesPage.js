@@ -82,7 +82,7 @@ const QuotesPage = () => {
           </div>
           <div className="text-center mt-6">
             <button
-              className="bg-blue-500 text-white py-2 px-6 rounded-lg hover:bg-blue-600"
+              className="bg-orange-400 text-white py-2 px-6 rounded-lg"
               onClick={handlePage}
             >
               Load More
@@ -93,7 +93,7 @@ const QuotesPage = () => {
 
       <Link
         to="/CreateQuotes"
-        className="fixed bottom-10 right-10 bg-blue-500 text-white p-4 rounded-full shadow-lg hover:bg-blue-600"
+        className="fixed bottom-10 right-10 bg-orange-400 text-white p-4 rounded-full shadow-lg hover:bg-orange-600"
       >
         Create Quotes+
       </Link>
