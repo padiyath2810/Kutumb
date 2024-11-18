@@ -15,27 +15,32 @@ const AppLayout = () => {
   );
 };
 
-const router = createBrowserRouter([
+const router = createBrowserRouter(
+  [
+    {
+      path: "/",
+      element: <AppLayout />,
+      children: [
+        {
+          path: "/",
+          element: <Login />,
+        },
+        {
+          path: "/quotes",
+          element: <QuotesPage />,
+        },
+        {
+          path: "/CreateQuotes",
+          element: <QuoteCreate />,
+        },
+      ],
+      errorElement: <Error />,
+    },
+  ],
   {
-    path: "/",
-    element: <AppLayout />,
-    children: [
-      {
-        path: "/",
-        element: <Login />,
-      },
-      {
-        path: "/quotes",
-        element: <QuotesPage />,
-      },
-      {
-        path: "/CreateQuotes",
-        element: <QuoteCreate />,
-      },
-    ],
-    errorElement: <Error />,
-  },
-]);
+    basename: "/Kutumb",
+  }
+);
 
 function App() {
   return <RouterProvider router={router} />;
